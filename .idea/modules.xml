@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Tangram.iml" filepath="$PROJECT_DIR$/.idea/modules/Tangram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tangram_util.iml" filepath="$PROJECT_DIR$/.idea/modules/tangram_util.iml" group="tangram_util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tangram_util/tangram_util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tangram_util/tangram_util_main.iml" group="tangram_util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tangram_util/tangram_util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tangram_util/tangram_util_test.iml" group="tangram_util" />
+    </modules>
+  </component>
+</project>

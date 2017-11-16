@@ -1,0 +1,30 @@
+group 'com.enation.app.enation'
+version '1.0.0'
+
+apply plugin: 'java'
+apply plugin: 'com.novoda.bintray-release'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+tasks.withType(Javadoc) {
+    options{ encoding "UTF-8"
+        charSet 'UTF-8'
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+}
+
+publish {
+    userOrg = 'geamtear'      //bintray注册的用户名
+    groupId = 'com.enation.app.mobile'         //compile引用时的第1部分groupId
+    artifactId = 'tangram'     //compile引用时的第2部分项目名
+    publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+    desc = 'tangram utils'
+    website = 'https://github.com/YuMengShuaii'
+}
