@@ -1,5 +1,7 @@
 package com.enation.app.mobile.tangram.model;
 
+import com.enation.app.mobile.tangram.utils.TangramEnum;
+
 import java.util.Map;
 
 /**
@@ -23,7 +25,7 @@ public class HorizontalViewStyleBean {
      */
     private Map<String,String> specialInterval;
     /**
-     * 是否无线滚动
+     * 是否可以无限滚动
      */
     private boolean infinite;
     /**
@@ -79,7 +81,10 @@ public class HorizontalViewStyleBean {
      */
     private String bgColor;
 
-    public HorizontalViewStyleBean(Around margin, Around padding, Integer autoScroll, Map<String, String> specialInterval, boolean infinite, String indicatorImg1, String indicatorImg2, String indicatorGravity, String indicatorPosition, Integer indicatorGap, Integer indicatorMargin, Integer indicatorHeight, Integer pageWidth, Integer scrollMarginLeft, Integer scrollMarginRight, Integer hGap, Integer pageRatio, String bgColor) {
+    /**
+     * 构造方法
+     */
+    public HorizontalViewStyleBean(Around margin, Around padding, Integer autoScroll, Map<String, String> specialInterval, boolean infinite, String indicatorImg1, String indicatorImg2, TangramEnum.IndicatorGravity indicatorGravity, TangramEnum.IndicatorPosition indicatorPosition, Integer indicatorGap, Integer indicatorMargin, Integer indicatorHeight, Integer pageWidth, Integer scrollMarginLeft, Integer scrollMarginRight, Integer hGap, Integer pageRatio, String bgColor) {
         this.margin = margin;
         this.padding = padding;
         this.autoScroll = autoScroll;
@@ -87,8 +92,8 @@ public class HorizontalViewStyleBean {
         this.infinite = infinite;
         this.indicatorImg1 = indicatorImg1;
         this.indicatorImg2 = indicatorImg2;
-        this.indicatorGravity = indicatorGravity;
-        this.indicatorPosition = indicatorPosition;
+        this.indicatorGravity = indicatorGravity.toString();
+        this.indicatorPosition = indicatorPosition.toString();
         this.indicatorGap = indicatorGap;
         this.indicatorMargin = indicatorMargin;
         this.indicatorHeight = indicatorHeight;
@@ -163,16 +168,16 @@ public class HorizontalViewStyleBean {
         return indicatorGravity;
     }
 
-    public void setIndicatorGravity(String indicatorGravity) {
-        this.indicatorGravity = indicatorGravity;
+    public void setIndicatorGravity(TangramEnum.IndicatorGravity indicatorGravity) {
+        this.indicatorGravity = indicatorGravity.toString();
     }
 
     public String getIndicatorPosition() {
         return indicatorPosition;
     }
 
-    public void setIndicatorPosition(String indicatorPosition) {
-        this.indicatorPosition = indicatorPosition;
+    public void setIndicatorPosition(TangramEnum.IndicatorPosition indicatorPosition) {
+        this.indicatorPosition = indicatorPosition.toString();
     }
 
     public Integer getIndicatorGap() {

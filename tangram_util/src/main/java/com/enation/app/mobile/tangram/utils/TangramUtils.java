@@ -17,9 +17,9 @@ public class TangramUtils {
     public static HorizontalViewStyleBean getCarouselStyle(String selectImage, String nomalImage){
         HorizontalViewStyleBean carouselStyle = new HorizontalViewStyleBean();
         carouselStyle.setAutoScroll(2000);
-        carouselStyle.setIndicatorGravity(TangramConfig.IndicatorGravity.CENTER);
+        carouselStyle.setIndicatorGravity(TangramEnum.IndicatorGravity.CENTER);
         carouselStyle.setIndicatorGap(2);
-        carouselStyle.setIndicatorPosition(TangramConfig.IndicatorPosition.OUTSIZE);
+        carouselStyle.setIndicatorPosition(TangramEnum.IndicatorPosition.OUTSIZE);
         carouselStyle.setMargin(Around.create(5,5,5,5));
         carouselStyle.setPadding(Around.create(5,5,5,5));
         carouselStyle.setInfinite(true);

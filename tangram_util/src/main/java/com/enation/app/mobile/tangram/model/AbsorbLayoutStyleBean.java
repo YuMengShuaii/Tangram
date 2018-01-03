@@ -1,5 +1,7 @@
 package com.enation.app.mobile.tangram.model;
 
+import com.enation.app.mobile.tangram.utils.TangramEnum;
+
 /**
  * 吸附布局
  */
@@ -17,13 +19,27 @@ public class AbsorbLayoutStyleBean {
      */
     private boolean enableScroll;
 
-    public AbsorbLayoutStyleBean(Around margin, Integer offset, boolean enableScroll) {
+    /**
+     * 吸顶/吸底
+     */
+    private String sticky;
+
+    public AbsorbLayoutStyleBean(Around margin, Integer offset, boolean enableScroll ,TangramEnum.Sticky sticky) {
         this.margin = margin;
         this.offset = offset;
         this.enableScroll = enableScroll;
+        this.sticky = sticky.toString();
     }
 
     public AbsorbLayoutStyleBean() {
+    }
+
+    public String getSticky() {
+        return sticky;
+    }
+
+    public void setSticky(TangramEnum.Sticky sticky) {
+        this.sticky = sticky.toString();
     }
 
     public Around getMargin() {

@@ -19,7 +19,6 @@ public class WaterfallLayoutStyleBean {
      * 水平方向Item间距
      */
     private Integer hGap;
-
     /**
      * 背景颜色
      */

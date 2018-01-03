@@ -1,5 +1,7 @@
 package com.enation.app.mobile.tangram.model;
 
+import com.enation.app.mobile.tangram.utils.TangramEnum;
+
 /**
  * 固定布局
  */
@@ -25,12 +27,12 @@ public class FixLayoutStyleBean {
      */
     private String showType;
 
-    public FixLayoutStyleBean(String align, Integer x, Integer y, String bgColor, String showType) {
-        this.align = align;
+    public FixLayoutStyleBean(TangramEnum.Align align, Integer x, Integer y, String bgColor, TangramEnum.ShowType showType) {
+        this.align = align.toString();
         this.x = x;
         this.y = y;
         this.bgColor = bgColor;
-        this.showType = showType;
+        this.showType = showType.toString();
     }
 
     public FixLayoutStyleBean() {
@@ -40,8 +42,8 @@ public class FixLayoutStyleBean {
         return align;
     }
 
-    public void setAlign(String align) {
-        this.align = align;
+    public void setAlign(TangramEnum.Align align) {
+        this.align = align.toString();
     }
 
     public Integer getX() {
@@ -72,7 +74,7 @@ public class FixLayoutStyleBean {
         return showType;
     }
 
-    public void setShowType(String showType) {
-        this.showType = showType;
+    public void setShowType(TangramEnum.ShowType showType) {
+        this.showType = showType.toString();
     }
 }

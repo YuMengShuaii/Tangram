@@ -1,5 +1,7 @@
 package com.enation.app.mobile.tangram.model;
 
+import com.enation.app.mobile.tangram.utils.TangramEnum;
+
 /**
  * 浮动布局
  */
@@ -21,8 +23,8 @@ public class FloatLayoutStyleBean {
      */
     private String bgColor;
 
-    public FloatLayoutStyleBean(String align, Integer x, Integer y, String bgColor) {
-        this.align = align;
+    public FloatLayoutStyleBean(TangramEnum.Align align, Integer x, Integer y, String bgColor) {
+        this.align = align.toString();
         this.x = x;
         this.y = y;
         this.bgColor = bgColor;
@@ -35,8 +37,8 @@ public class FloatLayoutStyleBean {
         return align;
     }
 
-    public void setAlign(String align) {
-        this.align = align;
+    public void setAlign(TangramEnum.Align align) {
+        this.align = align.toString();
     }
 
     public Integer getX() {
