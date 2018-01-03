@@ -4,7 +4,7 @@ public class TangramItemBean {
     /**
      * Native注册控件使用的Type
      */
-    private Integer type;
+    private String type;
     /**
      * 标题信息
      */
@@ -12,7 +12,7 @@ public class TangramItemBean {
     /**
      * 图片Url
      */
-    private String  imageurl;
+    private String  imgUrl;
     /**
      * 功能类型
      */
@@ -27,10 +27,10 @@ public class TangramItemBean {
      */
     private String  body;
 
-    public TangramItemBean(Integer type, String title, String imageurl, Integer actionType, String body) {
+    public TangramItemBean(String type, String title, String imageurl, Integer actionType, String body) {
         this.type = type;
         this.title = title;
-        this.imageurl = imageurl;
+        this.imgUrl = imageurl;
         this.actionType = actionType;
         this.body = body;
     }
@@ -38,11 +38,11 @@ public class TangramItemBean {
     public TangramItemBean() {
     }
 
-    public Integer getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Integer type) {
+    public void setType(String type) {
         this.type = type;
     }
 
@@ -55,11 +55,11 @@ public class TangramItemBean {
     }
 
     public String getImageurl() {
-        return imageurl;
+        return imgUrl;
     }
 
     public void setImageurl(String imageurl) {
-        this.imageurl = imageurl;
+        this.imgUrl = imageurl;
     }
 
     public Integer getActionType() {

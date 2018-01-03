@@ -8,6 +8,42 @@ import java.util.Map;
  * 横向视图 可为轮播
  */
 public class HorizontalViewStyleBean {
+
+
+    /**
+     * 轮播页面的外间距
+     */
+    private Around pageMargin;
+
+    /**
+     * 轮播指示器的未选中的颜色
+     */
+    private String defaultIndicatorColor;
+
+    /**
+     * 轮播指示器的已选中颜色
+     */
+    private String indicatorColor;
+
+    /**
+     * 控件的高度
+     */
+    private String pageHeight;
+
+    /**
+     * 轮播页面动画
+     */
+    private String animation;
+
+    /**
+     * 轮播指示器风格
+     */
+    private String indicatorStyle;
+
+    /**
+     * 轮播指示器大小
+     */
+    private String indicatorRadius;
     /**
      * 外间距
      */
@@ -28,14 +64,6 @@ public class HorizontalViewStyleBean {
      * 是否可以无限滚动
      */
     private boolean infinite;
-    /**
-     * 选中状态 轮播指示图
-     */
-    private String indicatorImg1;
-    /**
-     * 未选中状态 轮播指示图
-     */
-    private String indicatorImg2;
     /**
      * 轮播指示器 位置
      */
@@ -81,19 +109,21 @@ public class HorizontalViewStyleBean {
      */
     private String bgColor;
 
-    /**
-     * 构造方法
-     */
-    public HorizontalViewStyleBean(Around margin, Around padding, Integer autoScroll, Map<String, String> specialInterval, boolean infinite, String indicatorImg1, String indicatorImg2, TangramEnum.IndicatorGravity indicatorGravity, TangramEnum.IndicatorPosition indicatorPosition, Integer indicatorGap, Integer indicatorMargin, Integer indicatorHeight, Integer pageWidth, Integer scrollMarginLeft, Integer scrollMarginRight, Integer hGap, Integer pageRatio, String bgColor) {
+    public HorizontalViewStyleBean(Around pageMargin, String defaultIndicatorColor, String indicatorColor, String pageHeight, String animation, String indicatorStyle, String indicatorRadius, Around margin, Around padding, Integer autoScroll, Map<String, String> specialInterval, boolean infinite, String indicatorGravity, String indicatorPosition, Integer indicatorGap, Integer indicatorMargin, Integer indicatorHeight, Integer pageWidth, Integer scrollMarginLeft, Integer scrollMarginRight, Integer hGap, Integer pageRatio, String bgColor) {
+        this.pageMargin = pageMargin;
+        this.defaultIndicatorColor = defaultIndicatorColor;
+        this.indicatorColor = indicatorColor;
+        this.pageHeight = pageHeight;
+        this.animation = animation;
+        this.indicatorStyle = indicatorStyle;
+        this.indicatorRadius = indicatorRadius;
         this.margin = margin;
         this.padding = padding;
         this.autoScroll = autoScroll;
         this.specialInterval = specialInterval;
         this.infinite = infinite;
-        this.indicatorImg1 = indicatorImg1;
-        this.indicatorImg2 = indicatorImg2;
-        this.indicatorGravity = indicatorGravity.toString();
-        this.indicatorPosition = indicatorPosition.toString();
+        this.indicatorGravity = indicatorGravity;
+        this.indicatorPosition = indicatorPosition;
         this.indicatorGap = indicatorGap;
         this.indicatorMargin = indicatorMargin;
         this.indicatorHeight = indicatorHeight;
@@ -104,6 +134,11 @@ public class HorizontalViewStyleBean {
         this.pageRatio = pageRatio;
         this.bgColor = bgColor;
     }
+
+    /**
+     * 构造方法
+     */
+
 
     public HorizontalViewStyleBean() {
     }
@@ -146,22 +181,6 @@ public class HorizontalViewStyleBean {
 
     public void setInfinite(boolean infinite) {
         this.infinite = infinite;
-    }
-
-    public String getIndicatorImg1() {
-        return indicatorImg1;
-    }
-
-    public void setIndicatorImg1(String indicatorImg1) {
-        this.indicatorImg1 = indicatorImg1;
-    }
-
-    public String getIndicatorImg2() {
-        return indicatorImg2;
-    }
-
-    public void setIndicatorImg2(String indicatorImg2) {
-        this.indicatorImg2 = indicatorImg2;
     }
 
     public String getIndicatorGravity() {
@@ -250,5 +269,69 @@ public class HorizontalViewStyleBean {
 
     public void setBgColor(String bgColor) {
         this.bgColor = bgColor;
+    }
+
+    public Around getPageMargin() {
+        return pageMargin;
+    }
+
+    public void setPageMargin(Around pageMargin) {
+        this.pageMargin = pageMargin;
+    }
+
+    public String getDefaultIndicatorColor() {
+        return defaultIndicatorColor;
+    }
+
+    public void setDefaultIndicatorColor(String defaultIndicatorColor) {
+        this.defaultIndicatorColor = defaultIndicatorColor;
+    }
+
+    public String getIndicatorColor() {
+        return indicatorColor;
+    }
+
+    public void setIndicatorColor(String indicatorColor) {
+        this.indicatorColor = indicatorColor;
+    }
+
+    public String getPageHeight() {
+        return pageHeight;
+    }
+
+    public void setPageHeight(String pageHeight) {
+        this.pageHeight = pageHeight;
+    }
+
+    public String getAnimation() {
+        return animation;
+    }
+
+    public void setAnimation(String animation) {
+        this.animation = animation;
+    }
+
+    public String getIndicatorStyle() {
+        return indicatorStyle;
+    }
+
+    public void setIndicatorStyle(String indicatorStyle) {
+        this.indicatorStyle = indicatorStyle;
+    }
+
+    public String getIndicatorRadius() {
+        return indicatorRadius;
+    }
+
+    public void setIndicatorRadius(String indicatorRadius) {
+        this.indicatorRadius = indicatorRadius;
+    }
+
+    public void setIndicatorGravity(String indicatorGravity) {
+        this.indicatorGravity = indicatorGravity;
+    }
+
+    public void setIndicatorPosition(String indicatorPosition) {
+        this.indicatorPosition = indicatorPosition;
     }
 }

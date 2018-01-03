@@ -10,11 +10,11 @@ import java.util.List;
 public class TangramUtils {
     /**
      * 构建轮播图Style
-     * @param selectImage  轮播指示器选中状态图片
-     * @param nomalImage   轮播指示器未选中状态图片
+     * @param selectIndicatorColor  轮播指示器选中状态颜色
+     * @param nomalIndicatorColor   轮播指示器未选中状态颜色
      * @return
      */
-    public static HorizontalViewStyleBean getCarouselStyle(String selectImage, String nomalImage){
+    public static HorizontalViewStyleBean getCarouselStyle(String selectIndicatorColor, String nomalIndicatorColor,String indicatorSize){
         HorizontalViewStyleBean carouselStyle = new HorizontalViewStyleBean();
         carouselStyle.setAutoScroll(2000);
         carouselStyle.setIndicatorGravity(TangramEnum.IndicatorGravity.CENTER);
@@ -28,8 +28,10 @@ public class TangramUtils {
         carouselStyle.sethGap(12);
         carouselStyle.setPageRatio(1);
         carouselStyle.setBgColor("#ffffff");
-        carouselStyle.setIndicatorImg1(selectImage);
-        carouselStyle.setIndicatorImg2(nomalImage);
+        carouselStyle.setAnimation("desc");
+        carouselStyle.setDefaultIndicatorColor(nomalIndicatorColor);
+        carouselStyle.setIndicatorStyle(selectIndicatorColor);
+        carouselStyle.setIndicatorRadius(indicatorSize);
         return carouselStyle;
     }
 
